@@ -19,7 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 PROJECT_PATH = "/Users/feizheng/github/choicely-proxy"
+set :output, "#{PROJECT_PATH}/log/access.log"
 
 every 12.hours do
-  # system "cd #{PROJECT_PATH} && ruby src/app.rb"
+  system "cd #{PROJECT_PATH} && ruby src/app.rb"
 end

@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require "sqlite3"
-require "active_record"
 require_relative "../src/initialize"
 
 # Proxy.create(ip: "127.0.0.1", port: "9090")

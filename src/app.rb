@@ -52,7 +52,7 @@ class App
         items.each do |proxy|
           res = @cp_app.fetch(proxy)
           unless res.nil?
-            @rows << res
+            @rows << { ip: res[:ip], port: res[:port], url: "http://#{res[:ip]}:#{res[:port]}" }
           end
         end
       end
@@ -73,7 +73,7 @@ class App
   end
 end
 
-app = App.new({ should_destroy: false })
+app = App.new({ should_destroy: true })
 app.start
 
 # http_proxy=http://120.234.63.196:3128 curl -i icanhazip.com
