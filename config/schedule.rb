@@ -21,5 +21,5 @@
 PROJECT_PATH = "/Users/feizheng/github/choicely-proxy"
 
 every 12.hours do
-  system "cd #{PROJECT_PATH} && ruby src/app.rb"
+  # system "cd #{PROJECT_PATH} && ruby src/app.rb"
 end
