@@ -6,6 +6,7 @@ namespace :db do
 
   desc "Setup database."
   task :setup do
+    system "cp db/choicely-proxy.sqlite3_bak db/choicely-proxy.sqlite3"
     ruby "db/schema.rb"
   end
 end

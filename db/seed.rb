@@ -8,6 +8,10 @@
 
 require "sqlite3"
 require "active_record"
-require_relative "../src/app"
+require_relative "../src/initialize"
 
-Proxy.create(ip: "http://127.0.0.1", port: "9090")
+# Proxy.create(ip: "127.0.0.1", port: "9090")
+
+Proxy.all.each do |item|
+  p item
+end
