@@ -1,0 +1,14 @@
+{
+  "name": "@feizheng/choicely-proxy",
+  "version": "1.0.0",
+  "description": "Choicely proxy.",
+  "homepage": "https://github.com/afeiship",
+  "author": {
+    "name": "afeiship",
+    "email": "1290657123@qq.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
