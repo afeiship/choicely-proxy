@@ -2,7 +2,7 @@
 > Choicely proxy.
 
 ## sqlite3 file
-<img width="800" src="https://tva1.sinaimg.cn/large/00831rSTgy1gch6v8d0b1j30uq0i0q51.jpg" />
+<img width="800" src="https://tva1.sinaimg.cn/large/00831rSTgy1gch71fn2j3j30v80i0tar.jpg" />
 
 ## resources
 - https://www.devdungeon.com/content/ruby-activerecord-without-rails-tutorial
