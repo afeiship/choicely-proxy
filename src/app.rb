@@ -4,44 +4,20 @@
 # particular Rails dependencies we need
 
 require_relative "./initialize"
-include Nx
 
 DEFAULT_OPTIONS = { should_destroy: false, thread: 60 }
-
-class ChoicelyProxy
-  def initialize
-    @real_ip = RealIp.get
-  end
-
-  def fetch(proxy)
-    puts "current proxy is: #{proxy}"
-    proxy_url = "http://#{proxy[:ip]}:#{proxy[:port]}"
-    begin
-      current_ip = RealIp.get(proxy: proxy_url, timeout: 5)
-      if current_ip.nil? || current_ip == @real_ip
-        nil
-      else
-        proxy
-      end
-    rescue Exception => e
-      puts e.class
-      if e.class == Interrupt || e.class == SignalException
-        puts "Break by manural~"
-      end
-    end
-  end
-end
 
 class App
   def initialize(options)
     @options = {}.merge(DEFAULT_OPTIONS, options)
-    load_proxies
     @cp_app = ChoicelyProxy.new
     @rows = []
+    load_proxies
   end
 
   def load_proxies
-    @proxies = SpysProxy.fetch + GatherProxy.fetch + UsProxy.fetch + XiciProxy.fetch
+    @proxies = GatherProxy.fetch + UsProxy.fetch + XiciProxy.fetch
+    # @proxies = SpysProxy.fetch
   end
 
   def start
@@ -73,7 +49,7 @@ class App
   end
 end
 
-app = App.new({ should_destroy: true })
+app = App.new({ should_destroy: false })
 app.start
 
 # http_proxy=http://120.234.63.196:3128 curl -i icanhazip.com
