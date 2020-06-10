@@ -19,8 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 PROJECT_PATH = "/Users/feizheng/github/choicely-proxy"
-set :output, "#{PROJECT_PATH}/log/access.log"
+set :output, "#{PROJECT_PATH}/log/cron_app.log"
 
-every 2.days do
-  command "cd #{PROJECT_PATH} && ruby src/app.rb"
+every 2.minutes do
+  command "cd #{PROJECT_PATH} && npm run app"
 end

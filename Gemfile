@@ -10,5 +10,8 @@ gem "nx-gather-proxy"
 gem "nx-spys-proxy"
 gem "nx-real-ip"
 
+gem "sinatra"
+gem "sinatra-contrib"
+gem "sinatra/cors"
 # in ubuntu
 # gem 'ruby-activerecord'

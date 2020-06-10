@@ -10,6 +10,4 @@ require_relative "../src/initialize"
 
 # Proxy.create(ip: "127.0.0.1", port: "9090")
 
-Proxy.all.each do |item|
-  p item
-end
+puts Proxy.all.to_json
