@@ -12,3 +12,5 @@ package-lock.json
 # vscode
 .vscode
 .history
+
+choicely-proxy.sqlite3

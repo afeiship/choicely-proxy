@@ -16,7 +16,7 @@ class App
   end
 
   def load_proxies
-    @proxies = GatherProxy.fetch + XiciProxy.fetch
+    @proxies = UsProxy.fetch
     # @proxies = SpysProxy.fetch
   end
 
