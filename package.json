@@ -9,6 +9,7 @@
   },
   "scripts": {
     "serve": "ruby src/server.rb",
+    "serve:fg": "ruby src/server.rb &>/dev/null &",
     "app": "ruby src/app.rb"
   },
   "license": "MIT",
