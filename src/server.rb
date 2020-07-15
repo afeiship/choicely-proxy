@@ -13,6 +13,6 @@ namespace "/api/v1" do
   end
 
   get "/proxies" do
-    Proxy.all.to_json(except: [:id, :created_at, :updated_at])
+    Proxy.all.to_json(except: [:id, :created_at])
   end
 end
